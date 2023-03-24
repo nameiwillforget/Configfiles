@@ -10,9 +10,14 @@
 (require 'dired-x)
 (require 'w3m-load)
 (require 'mime-w3m)
-(require 'savehist)
+(require 'icicles)
 
+(require 'savehist)
 (add-to-list 'savehist-additional-variables 'helm-dired-history-variable)
+
+ (require 'auto-install)
+(setq auto-install-save-confirm nil)
+
 
 (with-eval-after-load 'dired
   (require 'helm-dired-history)
@@ -30,9 +35,76 @@
 (use-package yasnippet)
 (use-package yasnippet-snippets)
 
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
+(use-package bookmark+
+             :quelpa (bookmark+ :fetcher wiki
+                                    :files
+                                    ("bookmark+.el"
+                                     "bookmark+-mac.el"
+                                     "bookmark+-bmu.el"
+                                     "bookmark+-1.el"
+                                     "bookmark+-key.el"
+                                     "bookmark+-lit.el"
+                                     "bookmark+-doc.el"
+                                     "bookmark+-chg.el"))
+                 :defer 2)
+
+
+;; (use-package icicles
+;;              :quelpa (icicles :fetcher wiki
+;;                                 :files
+;; (  "col-highlight.el"           ; Column highlighting
+;;    "crosshairs.el"              ; Crosshairs highlighting
+;;    "doremi.el"                  ; Change incrementally (requires ring+.el)
+;;    "hexrgb.el"                  ; Color manipulation
+;;    "hl-line+.el"                ; Line highlighting
+;;    "icicles.el"                 ; Main library - just loads the others
+;;    "icicles-chg.el"             ; Change logs
+;;    "icicles-doc1.el"            ; Doc, part 1
+;;    "icicles-doc2.el"            ; Doc, part 2
+;;    "icicles-cmd1.el"            ; Top-level Icicles commands, part 1
+;;    "icicles-cmd2.el"            ; Top-level Icicles commands, part 2
+;;    "icicles-face.el"            ; Faces
+;;    "icicles-fn.el"              ; Non-interactive functions
+;;    "icicles-mac.el"             ; Macros
+;;    "icicles-mcmd.el"            ; Minibuffer commands
+;;    "icicles-mode.el"            ; Icicle (Icy) mode
+;;    "icicles-opt.el"             ; User options
+;;    "icicles-var.el"             ; Internal variables
+;;    "icomplete+.el"              ; Enhancements to `icomplete.el'
+;;    "lacarte.el"                 ; Menu-bar access from keyboard
+;;    "ring+.el"                   ; Ring stuff (required by doremi.el
+;;    "synonyms.el"                ; Synonym lookup
+;;    "vline.el"                   ; Column highlighting
+;;    "apropos-fn+var.el"
+;;    "bookmark+.el"
+;;    "dired+.el"
+;;    "doremi-frm.el"
+;;    "ffap-.el"
+;;    "fit-frame.el"
+;;    "fuzzy-match.el"
+;;    "info+.el"
+;;    "linkd"
+;;    "menu-bar+.el"
+;;    "misc-cmds.el"
+;;    "palette.el"
+;;    "pp+.el"
+;;    "thingatpt+.el"
+;;    "wid-edit+.el"
+;; ))
+;;                  :defer 2)
+
+
 ;; (use-package vlc-rc
 ;; :config
 ;; (global-set-key (kbd "C-c V")'vlc-rc-map)
 ;; )
 ;; (use-package telega)
 ;; (setq telega-server-libs-prefix '/var/lib/pacman/local/)
+

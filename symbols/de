@@ -945,8 +945,8 @@ xkb_symbols "adnw_base" {
 
 
     key <AD01> { [ p,                       P,                       NoSymbol,                Greek_pi,		       NoSymbol,	      Greek_PI,                multiply,                U043F                 ] };
-    key <AD02> { [ u,                       U,                       NoSymbol,                NoSymbol,                NoSymbol,              NoSymbol,                U2200,                   U0443                 ] };
-    key <AD03> { [ udiaeresis,              Udiaeresis,              NoSymbol,                Greek_chi,               NoSymbol,              NoSymbol,                U2191,                   U044B                 ] };
+    key <AD02> { [ j,                       J,                       NoSymbol,                NoSymbol,                NoSymbol,              NoSymbol,                U2200,                   U0443                 ] };
+    key <AD03> { [ u,                       U,              NoSymbol,                Greek_chi,               NoSymbol,              NoSymbol,                U2191,                   U044B                 ] };
     key <AD05> { [ q,			    Q,			     NoSymbol,                NoSymbol,                NoSymbol,              NoSymbol,                U22C9,                   U044C                 ] };
     key <AD06> { [ v,                       V,                       NoSymbol,                NoSymbol,                NoSymbol,              NoSymbol,                U22CA,                   U0432                 ] };
     key <AD07> { [ c,                       C,                       U2218,                NoSymbol,                4,	              NoSymbol,                U227A,			U0447                 ] };
@@ -969,14 +969,14 @@ xkb_symbols "adnw_base" {
     key <AB02> { [ y,                       Y,                       NoSymbol,                Greek_upsilon,           NoSymbol,              NoSymbol,                U222B,                   U044E                 ] };
     key <AB03> { [ x,                       X,                       NoSymbol,                Greek_xi,                questiondown,              Greek_XI,                U2205,                   NoSymbol              ] };
     key <AB05> { [ odiaeresis,              Odiaeresis,              NoSymbol,                Greek_psi,               KP_Separator,              Greek_PSI,                U221D,			 U0446                 ] };
-    key <AB06> { [ j,                       J,                       NoSymbol,                Greek_theta,              0,	              Greek_THETA,                U221E,                   U0437                 ] };
+    key <AB06> { [ b,                       B,                       NoSymbol,                Greek_theta,              0,	              Greek_THETA,                U221E,                   U0437                 ] };
     key <AB07> { [ g,                       G,                       NoSymbol,                Greek_gamma,             7,		      Greek_GAMMA,                radical,                 U0433                 ] };
     key <AB08> { [ z,                       Z,                       NoSymbol,                Greek_zeta,              8,	              NoSymbol,                U2225,                   U0436                 ] };
     key <AB09> { [ w,                       W,                       NoSymbol,                Greek_omega,             9,		      Greek_OMEGA,                U2223,		   U0437                 ] };
-    key <AB10> { [ b,                       B,                       NoSymbol,                Greek_beta,              NoSymbol,              U05D1,                U222B,		     U0431                 ] };
+    key <AB10> { [ ssharp,                      U1E9E,                       NoSymbol,                Greek_beta,              NoSymbol,              U05D1,                U222B,		     U0431                 ] };
 
-    key <LSGT> { [ ssharp,                  U1E9E,                   NoSymbol,                Greek_finalsmallsigma,   Escape,              NoSymbol,                U2208,                   U0448                 ] };  
-    key <BKSL> { [     at,                  U1E9E,                   NoSymbol,                Greek_finalsmallsigma,   NoSymbol,              NoSymbol,                U22C8,                   U0449                 ] };  
+    key <LSGT> { [ udiaeresis,                  Udiaeresis,                   Udiaeresis,                Greek_finalsmallsigma,   Escape,              NoSymbol,                U2208,                   U0448                 ] };  
+    key <BKSL> { [     at,                  U1E9E,                   U1E9E,                Greek_finalsmallsigma,   NoSymbol,              NoSymbol,                U22C8,                   U0449                 ] };  
 };
 
 partial alphanumeric_keys modifier_keys keypad_keys
