@@ -932,55 +932,57 @@ xkb_symbols "adnw_base" {
     include "de(neo_base)"
 
     key.type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK";
-    key <AD04> { [ comma,                    enfilledcircbullet,     NoSymbol,                U03D1,                   NoSymbol,              NoSymbol,                U2203,                   NoSymbol              ] };
-    key <AB04> { [ period,                   endash,                 NoSymbol,                U03F1,                   dead_circumflex,              NoSymbol,                U2261,                   NoSymbol              ] };
+    key <AD04> { [ comma,                    enfilledcircbullet,     NoSymbol,                U03D1,                   BackSpace,              NoSymbol,               U2203,                   NoSymbol              ] };
+    key <AB04> { [ period,                   endash,                 NoSymbol,                U03F1,                   dead_circumflex,              NoSymbol,         U2261,                   NoSymbol              ] };
 
     key.type[Group1] = "EIGHT_LEVEL_ALPHABETIC_LEVEL_FIVE_LOCK";
-    key <AE02> { [ Shift_L,                       U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,                logicaland,              NoSymbol                 ] };
+    key <AE02> { [ Shift_L,                 U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,              logicaland,              NoSymbol                 ] };
 
 
-    key <AE03> { [ Tab,                       U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,                logicaland,              NoSymbol                 ] };
+    key <AE03> { [ Tab,                     U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,              logicaland,              NoSymbol                 ] };
 
-    key <AE05> { [ Control_L,                       U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,                logicaland,              NoSymbol                 ] };
+    key <AE05> { [ Control_L,               U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,              logicaland,              NoSymbol                 ] };
+
+    key <AE07> { [ BackSpace,               U2113,                   threesuperior,           threesubscript,          numerosign,              NoSymbol,              logicaland,              NoSymbol                 ] };
 
 
-    key <AD01> { [ p,                       P,                       NoSymbol,                Greek_pi,		       NoSymbol,	      Greek_PI,                multiply,                U043F                 ] };
-    key <AD02> { [ u,                       U,                       NoSymbol,                NoSymbol,                NoSymbol,              NoSymbol,                U2200,                   U0443                 ] };
-    key <AD03> { [ udiaeresis,              Udiaeresis,              NoSymbol,                Greek_chi,               NoSymbol,              NoSymbol,                U2191,                   U044B                 ] };
-    key <AD05> { [ q,			    Q,			     NoSymbol,                NoSymbol,                NoSymbol,              NoSymbol,                U22C9,                   U044C                 ] };
-    key <AD06> { [ v,                       V,                       NoSymbol,                NoSymbol,                NoSymbol,              NoSymbol,                U22CA,                   U0432                 ] };
-    key <AD07> { [ c,                       C,                       U2218,                NoSymbol,                4,	              NoSymbol,                U227A,			U0447                 ] };
-    key <AD08> { [ l,                       L,                       U2219,                Greek_lambda,            5,		      Greek_LAMBDA,                U2227,                   U043B                 ] };
-    key <AD09> { [ m,                       M,                       NoSymbol,                Greek_mu,	               6,		      NoSymbol,                U227B,			U043C                 ] };
-    key <AD10> { [ f,                       F,                       NoSymbol,                Greek_phi,               NoSymbol,              Greek_PHI,                U220F,			 U0444                 ] };
-    key <AD11> { [ adiaeresis,              Adiaeresis,              U2210,                NoSymbol,                NoSymbol,              NoSymbol,                U2210,                   U044A                 ] };
-    key <AC01> { [ h,                       H,                       NoSymbol,                Greek_eta,               NoSymbol,              NoSymbol,                U2194,			U0445                 ] };
-    key <AC02> { [ i,                       I,                       NoSymbol,                Greek_iota,              NoSymbol,              NoSymbol,                U2190,			U0438                 ] };
-    key <AC03> { [ e,                       E,                       NoSymbol,                Greek_epsilon,           NoSymbol,              NoSymbol,                U2193,                   U044D                 ] };
-    key <AC04> { [ a,                       A,                       NoSymbol,                Greek_alpha,             NoSymbol,              U2135,                U2192,                   U044F                 ] };
-    key <AC05> { [ o,                       O,                       NoSymbol,                Greek_omicron,           NoSymbol,              U2207,                U21A6,			U043E                 ] };
-    key <AC06> { [ d,                       D,                       NoSymbol,                Greek_delta,             Return,              Greek_DELTA,                partialderivative,       U0434                 ] };
-    key <AC07> { [ t,                       T,                       NoSymbol,                Greek_tau,               1,                     NoSymbol,                U003C,			U0442                 ] };
-    key <AC08> { [ r,                       R,                       NoSymbol,                Greek_rho,               2,		      NoSymbol,                U2228,                   U0440                 ] };
-    key <AC09> { [ n,                       N,                       NoSymbol,                Greek_nu,                3,		      NoSymbol,                U003E,                   U043D                 ] };
-    key <AC10> { [ s,                       S,                       NoSymbol,                Greek_sigma,             Tab,                   Greek_SIGMA,                U221E,		    U0441                ] };
-    key <AC11> { [ ssharp,                  U1E9E,                   NoSymbol,                Greek_finalsmallsigma,   NoSymbol,              NoSymbol,                jot,                     NoSymbol              ] };
-    key <AB01> { [ k,                       K,                       NoSymbol,                Greek_kappa,             NoSymbol,              NoSymbol,                U2211,			U043A                 ] };
-    key <AB02> { [ y,                       Y,                       NoSymbol,                Greek_upsilon,           NoSymbol,              NoSymbol,                U222B,                   U044E                 ] };
-    key <AB03> { [ x,                       X,                       NoSymbol,                Greek_xi,                questiondown,              Greek_XI,                U2205,                   NoSymbol              ] };
-    key <AB05> { [ odiaeresis,              Odiaeresis,              NoSymbol,                Greek_psi,               KP_Separator,              Greek_PSI,                U221D,			 U0446                 ] };
-    key <AB06> { [ j,                       J,                       NoSymbol,                Greek_theta,              0,	              Greek_THETA,                U221E,                   U0437                 ] };
-    key <AB07> { [ g,                       G,                       NoSymbol,                Greek_gamma,             7,		      Greek_GAMMA,                radical,                 U0433                 ] };
-    key <AB08> { [ z,                       Z,                       NoSymbol,                Greek_zeta,              8,	              NoSymbol,                U2225,                   U0436                 ] };
-    key <AB09> { [ w,                       W,                       NoSymbol,                Greek_omega,             9,		      Greek_OMEGA,                U2223,		   U0437                 ] };
-    key <AB10> { [ b,                       B,                       NoSymbol,                Greek_beta,              NoSymbol,              U05D1,                U222B,		     U0431                 ] };
-
-    key <LSGT> { [ ssharp,                  U1E9E,                   NoSymbol,                Greek_finalsmallsigma,   Escape,              NoSymbol,                U2208,                   U0448                 ] };  
-    key <BKSL> { [     at,                  U1E9E,                   NoSymbol,                Greek_finalsmallsigma,   NoSymbol,              NoSymbol,                U22C8,                   U0449                 ] };  
+    key <AD01> { [ p,                       P,                       NoSymbol,                multiply,                Home,	              Greek_pi,	               Greek_PI,                U043F                 ] };
+    key <AD02> { [ u,                       U,                       NoSymbol,                U2200,                   NoSymbol,              NoSymbol,                NoSymbol,                U0443                 ] };
+    key <AD03> { [ quotedbl,              apostrophe,                NoSymbol,                U2191,                   NoSymbol,              Greek_chi,               NoSymbol,                U044B                 ] };
+    key <AD05> { [ q,			    Q,			     NoSymbol,                U22C9,                   End,                   NoSymbol,                NoSymbol,                U044C                 ] };
+    key <AD06> { [ v,                       V,                       NoSymbol,                U22CA,                   NoSymbol,              NoSymbol,                NoSymbol,                U0432                 ] };
+    key <AD07> { [ c,                       C,                       U2218,                   U227A,                   4,	              NoSymbol,                NoSymbol,                U0447                 ] };
+    key <AD08> { [ l,                       L,                       U2219,                   U2227,                   5,		      Greek_lambda,            Greek_LAMBDA,            U043B                 ] };
+    key <AD09> { [ m,                       M,                       NoSymbol,                U227B,                   6,		      Greek_mu,	               NoSymbol,                U043C                 ] };
+    key <AD10> { [ f,                       F,                       NoSymbol,                U220F,                   NoSymbol,              Greek_phi,               Greek_PHI,                U0444                 ] };
+    key <AD11> { [ j,                       J,                       U2210,                   U2210,                   NoSymbol,              NoSymbol,                NoSymbol,                U044A                 ] };
+    key <AC01> { [ h,                       H,                       NoSymbol,                U2194,                   Prior,                 Greek_eta,               NoSymbol,                U0445                 ] };
+    key <AC02> { [ i,                       I,                       NoSymbol,                U2190,                   NoSymbol,              Greek_iota,              NoSymbol,                U0438                 ] };
+    key <AC03> { [ e,                       E,                       NoSymbol,                U2193,                   NoSymbol,              Greek_epsilon,           NoSymbol,                U044D                 ] };
+    key <AC04> { [ a,                       A,                       NoSymbol,                U2192,                   NoSymbol,              Greek_alpha,             U2135,                   U044F                 ] };
+    key <AC05> { [ o,                       O,                       NoSymbol,                U21A6,                   Next,                  Greek_omicron,           U2207,                   U043E                 ] };
+    key <AC06> { [ d,                       D,                       NoSymbol,                partialderivative,       Return,                Greek_delta,             Greek_DELTA,             U0434                 ] };
+    key <AC07> { [ t,                       T,                       NoSymbol,                U003C,                   1,                     Greek_tau,               NoSymbol,                U0442                 ] };
+    key <AC08> { [ r,                       R,                       NoSymbol,                U2228,                   2,		      Greek_rho,               NoSymbol,                U0440                 ] };
+    key <AC09> { [ n,                       N,                       NoSymbol,                U003E,                   3,		      Greek_nu,                NoSymbol,                U043D                 ] };
+    key <AC10> { [ s,                       S,                       NoSymbol,                U221E,                   Tab,                   Greek_sigma,             Greek_SIGMA,             U0441                ] };
+    key <AC11> { [ ssharp,                  U1E9E,                   NoSymbol,                jot,                     NoSymbol,              Greek_finalsmallsigma,   NoSymbol,                NoSymbol              ] };
+    key <AB01> { [ k,                       K,                       NoSymbol,                U2211,                   NoSymbol,              Greek_kappa,             NoSymbol,                U043A                 ] };
+    key <AB02> { [ y,                       Y,                       NoSymbol,                U222B,                   NoSymbol,              Greek_upsilon,           NoSymbol,                U044E                 ] };
+    key <AB03> { [ x,                       X,                       NoSymbol,                U2205,                   questiondown,          Greek_xi,                Greek_XI,                NoSymbol              ] };
+    key <AB05> { [ dead_circumflex,         dead_grave,              NoSymbol,                U221D,                   at,                    Greek_psi,               Greek_PSI,               U0446                 ] };
+    key <AB06> { [ b,                       B,                       NoSymbol,                U221E,                    0,	              Greek_theta,             Greek_THETA,             U0437                 ] };
+    key <AB07> { [ g,                       G,                       NoSymbol,                radical,                 7,		      Greek_gamma,             Greek_GAMMA,             U0433                 ] };
+    key <AB08> { [ z,                       Z,                       NoSymbol,                U2225,                   8,	              Greek_zeta,              NoSymbol,                U0436                 ] };
+    key <AB09> { [ w,                       W,                       NoSymbol,                U2223,                   9,		      Greek_omega,             Greek_OMEGA,             U0437                 ] };
+    key <AB10> { [ semicolon,               U1E9E,                   NoSymbol,                U222B,                   NoSymbol,              Greek_beta,              U05D1,                   U0431                 ] };
+											                               			      				
+    key <LSGT> { [ colon,                  Adiaeresis,                   Adiaeresis,          U2208,                   Escape,                Greek_finalsmallsigma,   NoSymbol,                U0448                 ] };  
+    key <BKSL> { [     at,                  U1E9E,                   U1E9E,                   U22C8,                   NoSymbol,              Greek_finalsmallsigma,   NoSymbol,                U0449                 ] };  
 };
 
 partial alphanumeric_keys modifier_keys keypad_keys
-xkb_symbols "adnw" {
+xkb_symbols "adnw" {2
 
     include "de(adnw_base)"
 
@@ -990,6 +992,7 @@ xkb_symbols "adnw" {
     include "level3(caps_switch)"
     include "level3(ac11_switch)"
     include "level5(ralt_switch_lock)"
+    include "level5(ac08_switch)"
 };
 
 partial alphanumeric_keys

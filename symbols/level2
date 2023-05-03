@@ -8,3 +8,12 @@ xkb_symbols "lsgt_switch" {
     symbols[Group1] = [ Shift_L ]
   };
 };
+
+// The Less/Greater key (while pressed) chooses the second shift level.
+partial modifier_keys
+xkb_symbols "tlde_switch" {
+  key <TLDE> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ Shift_L ]
+  };
+};
