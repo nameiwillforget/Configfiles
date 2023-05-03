@@ -81,8 +81,8 @@ MAPPINGS:
     TAP: KEY_LEFTALT
     HOLD: [KEY_RIGHTALT, KEY_CAPSLOCK, KEY_LEFTSHIFT]
 
-  - KEY: KEY_GRAVE
-    TAP: KEY_GRAVE
+  - KEY: KEY_6
+    TAP: KEY_6
     HOLD: [KEY_RIGHTALT, KEY_CAPSLOCK, KEY_LEFTSHIFT]
 
 # Use 2, 3, 4 and 5 keys to navigate between tabs and programs (3 key is configured in xkb) 
