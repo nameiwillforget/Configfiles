@@ -6,7 +6,11 @@
 (helm-mode 1)
 (savehist-mode 1)
 (global-display-line-numbers-mode 1)
- (icy-mode 1)
+(icy-mode 1)
+(dynamic-completion-mode 1)
+
+(epa-file-enable)
+
 
 (global-prettify-symbols-mode 1)
 (setq prettify-symbols-unprettify-at-point 'right-edge)
@@ -36,7 +40,7 @@
 (define-derived-mode writer-english-mode writer-mode "W-EN"
   "Writer mode - English.")
 
-(define-derived-mode writer-swedish-mode writer-mode "W-DE"
+(define-derived-mode writer-german-mode writer-mode "W-DE"
   "Writer mode - German.")
 
 (defun writer- ()
@@ -58,6 +62,8 @@
   (writer-setup-bindings))
 
 
+
+
 (define-derived-mode abbrev-org-mode org-mode "O-EN"
   "Org mode."
   (abbrev-mode 1))
@@ -65,7 +71,7 @@
 (define-derived-mode org-english-mode org-mode "O-EN"
   "Org mode - English.")
 
-(define-derived-mode org-swedish-mode org-mode "O-DE"
+(define-derived-mode org-german-mode org-mode "O-DE"
   "Org mode - German.")
 
 (defun org- ()
@@ -75,7 +81,15 @@
   (setq header-line-format " DE> ")
   (setq mode-line-format nil)
   (flyspell-mode -1)
-  (org-setup-bindings))
+  (org-setup-bindings)
+  )
+
+;; (let ((org-german-mode-map (make-sparse-keymap)))
+;;   (set-keymap-parent org-german-mode-map org-mode-map)
+;;   (define-key org-german-mode-map (kbd "\"") '\ü)
+;; )
+
+
 
 (defun org-english ()
   (interactive)
@@ -90,3 +104,5 @@
 (menu-bar-mode -1) 
 (scroll-bar-mode -1) 
 (tool-bar-mode -1) 
+ 
+(add-to-list 'auto-mode-alist '("\\.de\\'" . org-german-mode))

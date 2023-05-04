@@ -19,3 +19,4 @@
 ;; (add-to-list 'load-path "~/.emacs.d/vlc-rc")
 
 
+(setq font-use-system-font t) 

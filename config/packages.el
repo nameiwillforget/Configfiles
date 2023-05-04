@@ -11,6 +11,9 @@
 (require 'w3m-load)
 (require 'mime-w3m)
 (require 'icicles)
+(require 'projectile)
+
+(require 'epa)
 
 (require 'savehist)
 (add-to-list 'savehist-additional-variables 'helm-dired-history-variable)

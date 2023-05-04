@@ -51,7 +51,7 @@
 	(?^ ("\\dagger"))
 
 
-	(?! ("!`"))
+	(?! ("\\fcmp"))
 
 
 	(?< ("\\leq"))
@@ -77,15 +77,15 @@
 	(?{ ("\\}"))
 
 
-	(?* ("\\cdot" "\star"))
+	(?* ("\\cdot" "\\star"))
 
 	(?d ("\\div"))
 
-	(?t ("\\models"))
-	(?( ("\\left("))
+	(?o ("\\models"))
 
 
-	(?( ("\\right)"))
+	(?t ("\\left"))
+	(?r ("\\right"))
 
 	(?n ("\\dashv"))
 	(?- ("\\ominus"))
@@ -98,8 +98,6 @@
 	(?ß ("\\bigcirc"))
 
 	(?k ("\\swarrow"))
-
-
 
 
 	(?. ("\\searrow"))
@@ -118,7 +116,11 @@
 	(?b ("\\not"))
 
 
+	
+	(?! ("\\fcmp"))
 
+
+	
 	(?χ ("\\Uparrow" "\\Uuparrow"))
 	(?η ("\\Leftarrow" "\\Lleftarrow"))
 	(?ε ("\\Downarrow" "\\Ddownarrow"))
@@ -145,7 +147,7 @@
 	(?× ("\\otimes" "\\boxtimes"))
 
 
-	(?↑ ("\\hookuparrow" "\\twoheaduparrow"))
+
 
 	(?⋉ ("\\lftimes" "\\lfbowtie"))
 	(?⋊ ("\\rftimes" "\\rfbowtie"))
@@ -160,9 +162,10 @@
 
 
 
-	(?← ("\\hookleftarrow" "\\twoheadleftarrow"))
-	(?↓ ("\\hookuparrow" "\\twoheaduparrow"))
-	(?→ ("\\hookrightarrow" "\\twoheadrightarrow"))
+	(?← ("\\hookleftarrow" "\\twoheadleftarrow" "\\leftleftarrows"))
+	(?↑ ("\\hookuparrow" "\\twoheaduparrow" "\\upuparrows"))
+	(?→ ("\\hookrightarrow" "\\twoheadrightarrow" "\\rightrightarrows"))
+	(?↓ ("\\hookuparrow" "\\twoheaduparrow" "\\downdownarrows"))
     ))
 	
  
@@ -179,3 +182,4 @@
           (defun cdlatex-indent-maybe ()
             (when (or (bolp) (looking-back "^[ \t]+"))
               (LaTeX-indent-line))))
+

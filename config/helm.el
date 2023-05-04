@@ -657,7 +657,7 @@ First call indent, second complete symbol, third complete fname."
 (global-set-key (kbd "C-c <f4>")                    'helm-mark-ring)
 (global-set-key [remap bookmark-jump]                'helm-filtered-bookmarks)
 (global-set-key (kbd "C-:")                          'helm-eval-expression-with-eldoc)
-(global-set-key (kbd "C-,")                          'helm-calcul-expression)
+(global-set-key (kbd "C-]")                          'helm-calcul-expression)
 (global-set-key (kbd "C-h d")                        'helm-info-at-point)
 (global-set-key (kbd "C-h i")                        'helm-info)
 (global-set-key (kbd "C-x C-d")                      'helm-browse-project)

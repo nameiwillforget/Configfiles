@@ -6,8 +6,12 @@
 
 (add-hook 'org-mode-hook #'my-org-latex-yas)
 
-(setq org-latex-packages-alist '())
+(setq org-latex-default-packages-alist nil)
+(setq org-latex-packages-alist nil)
 (add-to-list 'org-latex-packages-alist '("" "cttools" t))
+
+
+(add-hook 'org-mode-hook #'abbrev-mode)
 
 (setq org-emphasis-alist (quote (("*" bold "<b>" "</b>")
                                  ("/" italic "<i>" "</i>")
@@ -16,3 +20,6 @@
                                  ("~" org-verbatim "<code>" "</code>" verbatim))))
 
 (setq org-export-with-smart-quotes t)
+
+(setq user-full-name "Alexander Prähauser")
+(setq org-latex-compiler "lualatex")
