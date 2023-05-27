@@ -162,3 +162,12 @@ xkb_symbols "lctl_switch_lock_cancel" {
                         ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock, ISO_Level5_Lock ]
   };
 };
+
+// The Backslash key (while pressed) chooses the third shift level.
+partial modifier_keys
+xkb_symbols "bksl_switch" {
+  key <BKSL> {
+    type[Group1]="ONE_LEVEL",
+    symbols[Group1] = [ ISO_Level5_Shift ]
+  };
+};

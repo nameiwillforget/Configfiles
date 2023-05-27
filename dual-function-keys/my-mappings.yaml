@@ -37,8 +37,8 @@ MAPPINGS:
     TAP: KEY_KP9
     HOLD: [KEY_CAPSLOCK, KEY_LEFTSHIFT]
 
-  - KEY: KEY_B
-    TAP: KEY_B
+  - KEY: KEY_E
+    TAP: KEY_E
     HOLD: [KEY_BACKSLASH, KEY_GRAVE]
 
 # Level 5 modifiers (Numbers and Arrows)
@@ -48,22 +48,23 @@ MAPPINGS:
     HOLD: KEY_RIGHTALT 
 
   - KEY: KEY_RIGHTALT
-    TAP: KEY_SCROLLLOCK
+    TAP: KEY_F15
     HOLD: KEY_RIGHTALT 
 
 # Level 6 modifiers (Math symbols)
 
   - KEY: KEY_8
-    TAP: KEY_KP8
+    TAP: KEY_SCROLLLOCK
     HOLD: [KEY_RIGHTALT, KEY_RIGHTSHIFT]
 
   - KEY: KEY_LEFTMETA
     TAP: KEY_LEFTMETA
     HOLD: [KEY_RIGHTALT, KEY_RIGHTSHIFT]
 
-  - KEY: KEY_E
-    TAP: KEY_E
+  - KEY: KEY_B
+    TAP: KEY_B
     HOLD: [KEY_8, KEY_GRAVE]
+
 
 # Level 7 modifiers (Uppercase Greek letters)
 
@@ -72,7 +73,7 @@ MAPPINGS:
     HOLD: [KEY_CAPSLOCK, KEY_RIGHTALT]
 
   - KEY: KEY_7
-    TAP: KEY_KP7
+    TAP: KEY_SCROLLLOCK
     HOLD: [KEY_CAPSLOCK, KEY_RIGHTALT]
 
 # Level 8 modifiers (Cyrillic letters)
@@ -84,6 +85,11 @@ MAPPINGS:
   - KEY: KEY_6
     TAP: KEY_6
     HOLD: [KEY_RIGHTALT, KEY_CAPSLOCK, KEY_LEFTSHIFT]
+
+  - KEY: KEY_RIGHTCTRL
+    TAP: KEY_RIGHTCTRL
+    HOLD: [KEY_RIGHTALT, KEY_CAPSLOCK, KEY_LEFTSHIFT]
+
 
 # Use 2, 3, 4 and 5 keys to navigate between tabs and programs (3 key is configured in xkb) 
 

@@ -1,4 +1,4 @@
-(bind-key* "C-e" 'previous-line)
+ (bind-key* "C-e" 'previous-line)
 (bind-key* "C-a" 'backward-char)
 
 (bind-key* "C-t" 'forward-char)
@@ -12,7 +12,11 @@
 
 (bind-key* "C-<right>" 'backward-word)
 (bind-key* "C-1" 'forward-word)
- 
+
+(bind-key* "M-τ" 'beginning-of-buffer)
+(bind-key* "M-ν" 'end-of-buffer)
+
+
 (bind-key* "C-i" 'isearch-backward)
 (define-key isearch-mode-map (kbd "C-i") 'isearch-repeat-backward)
 
@@ -25,6 +29,10 @@
 
 (bind-key* "M-n" 'replace-string)
 (bind-key* "M--" 'replace-regexp)
+
+(bind-key* "M-C-n" 'query-replace)
+(bind-key* "M--" 'query-replace-regexp)
+
  
 (bind-key* "C-," 'set-mark-command)
 
@@ -44,14 +52,22 @@
 (global-set-key (kbd "C-x C-b") 'helm-recentf)
 (global-set-key (kbd "C-x C-\"") 'helm-find-files)
 
+;; (bind-key* "M-ι" 'pop-tag-mark)
+;; (bind-key* "M-C-ι" 'pop-global-mark)
 
+(bind-key* "C-ι" 'backward-forward-previous-location)
+(bind-key* "C-α" 'backward-forward-next-location)
+
+
+(bind-key* "M-∧" 'upcase-region)
+(bind-key* "M-∨" 'downcase-region)
 
 ;;Tab settings
 (bind-key* "C-↓" 'tab-new)
 (bind-key* "C-↑" 'tab-close) 
 (bind-key* "C-←" 'tab-previous)
 (bind-key* "C-→" 'tab-next)
-(bind-key* "C-θ" 'tab-undo)
+(bind-key* "C-∈" 'tab-undo)
 
 
 
@@ -79,10 +95,9 @@
 (global-unset-key (kbd "<kp-9>"))
 (define-key function-key-map (kbd "<kp-9>") 'event-apply-meta-modifier)
 
-(bind-key* "C-^" 'tab-to-tab-stop)
+(bind-key* "C-p" 'tab-to-tab-stop)
 
 (bind-key* "C-s" 'w3m-search)
-
 
 ;;cdlatex-keybinds
 (global-unset-key (kbd "<XF86Launch5>"))
@@ -128,6 +143,7 @@
 ;;(define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward))
 
 (bind-key "f" 'find-name-dired dired-mode-map)
+(bind-key "M-m" 'dired-mark-suffix dired-mode-map)
 
 
 (bind-key "C-c C-r" 'eval-region emacs-lisp-mode-map)
@@ -143,9 +159,26 @@
 
 
 (define-key projectile-mode-map (kbd "M-\"") 'projectile-command-map)
+			
+(bind-keys :prefix-map miscellaneous-map :prefix (kbd "C-^")
+	   ("m" . mu4e-modeline-mode)
+	   ("^" . tab-to-tab-stop)
+	   ("s" . TeX-command-toggle-shell-escape)
+	   ("M" . magit)
+	   ("l" . list-packages)	  	   
+	   )
+
+(bind-keys :prefix-map miscellaneous-map :prefix (kbd "C-<dead-circumflex>")
+	   ("m" . mu4e-modeline-mode)
+	   ("^" . tab-to-tab-stop)
+	   ("s" . TeX-command-toggle-shell-escape)
+	   ("M" . magit)
+	   ("l" . list-packages)	  	   
+	   )
 
 
 
+;; :prefix (kbd "C-<dead-circumflex>")
 ;; (define-key helm-map (kbd "C-d") #'helm-next-source)
 
 

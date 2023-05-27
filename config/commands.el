@@ -13,3 +13,14 @@
           (rename-buffer new-name)
           (set-visited-file-name new-name)
           (set-buffer-modified-p nil))))))
+
+
+(defun disable-all-minor-modes ()
+  (interactive)
+  (mapc
+   (lambda (mode-symbol)
+     (when (functionp mode-symbol)
+       ;; some symbols are functions which aren't normal mode functions
+       (ignore-errors 
+         (funcall mode-symbol -1))))
+   minor-mode-list))

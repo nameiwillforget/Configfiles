@@ -51,7 +51,7 @@
 	(?^ ("\\dagger"))
 
 
-	(?! ("\\fcmp"))
+	(?? ("\\fcmp"))
 
 
 	(?< ("\\leq"))
@@ -117,7 +117,7 @@
 
 
 	
-	(?! ("\\fcmp"))
+
 
 
 	
@@ -134,9 +134,9 @@
 
 
 
-	(?λ ("\\cup" "\\Bigcup" "\\medtriangleup"))
+	(?λ ("\\cup" "\\bigcup" "\\medtriangleup"))
 	(?τ("\\supset" "\\supseteq" "\\medtriangleright"))
-	(?ρ("\\cap" "\\Bigcap" "\\medtriangledown"))
+	(?ρ("\\cap" "\\bigcap" "\\medtriangledown"))
 	(?ν("\\subset" "\\subseteq" "\\medtriangleleft"))
 
 
@@ -174,6 +174,11 @@
 	(?p "\\mathbb" nil t nil nil)
 	(?l "\\blue" nil t nil nil)
 	(?x "\\mathfrak" nil t nil nil)
+
+	(?← "\\xleftarrow" nil t nil nil)
+ 	(?↑ "\\xuparrow" nil t nil nil)
+	(?→ "\\xrightarrow" nil t nil nil)
+	(?↓ "\\xdownarrow" nil t nil nil)	
 	))
 
 

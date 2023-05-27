@@ -493,7 +493,7 @@ new directory."
 
 ;;; Helm-descbinds
 ;;
-(helm-descbinds-mode 1)
+;; (helm-descbinds-mode 1)
 
 ;;; Helm-lib
 ;;
