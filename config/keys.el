@@ -95,9 +95,7 @@
 (global-unset-key (kbd "<kp-9>"))
 (define-key function-key-map (kbd "<kp-9>") 'event-apply-meta-modifier)
 
-(bind-key* "C-p" 'indent-for-tab-command)
-
-(bind-key* "C-<tab>" 'tab-to-tab-stop)
+(bind-key* "C-p" 'tab-to-tab-stop)
 
 (bind-key* "C-s" 'w3m-search)
 
