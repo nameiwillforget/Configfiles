@@ -20,3 +20,13 @@
 
 
 (setq font-use-system-font t) 
+
+(desktop-save-mode 1)
+(setq desktop-path '("~/.emacs.d/desktops/"))
+
+(setq browse-url-browser-function 'browse-url-firefox)
+
+(setq browse-url-secondary-browser-function 'browse-url-firefox)
+
+
+(setq inferior-lisp-program "sbcl")

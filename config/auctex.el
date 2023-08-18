@@ -82,3 +82,37 @@
 
 
 
+(add-hook 'LaTeX-mode-hook 'add-my-latex-environments)
+(defun add-my-latex-environments ()
+  (LaTeX-add-environments
+   '("thm" LaTeX-env-label)
+   '("prp" LaTeX-env-label)
+   '("lem" LaTeX-env-label)
+   '("cor" LaTeX-env-label)
+   '("dfn" LaTeX-env-label)
+   '("not" LaTeX-env-label)
+   '("rmk" LaTeX-env-label)
+   '("xmp" LaTeX-env-label)
+   '("notation" LaTeX-env-label)
+   '("equation*" LaTeX-env-label)
+   '("tikzcd" LaTeX-env-label)
+   ))
+
+
+
+(add-to-list 'texmathp-tex-commands '("tikzcd" env-on))
+(texmathp-compile)
+
+
+(custom-set-variables 
+ '(font-latex-math-environments (quote  
+     ("display" "displaymath" "equation" "eqnarray" "gather" "multline"  
+      "align" "alignat" "xalignat" "dmath" "tikzcd"))) 
+  '(TeX-insert-braces nil)) ;;Stops putting {} on argumentless commands to "save" whitespace 
+
+;; Additionally, reftex code to recognize this environment as an equation 
+(setq reftex-label-alist 
+      '(
+	("dmath" ?e nil nil t)
+	("tikzcd" ?e nil nil t)
+	)) 

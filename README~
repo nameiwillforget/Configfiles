@@ -1,0 +1,9 @@
+The config files for my keyboard configuration and emacs. The configuration uses the synergy between several different levels:
+
+1. [dual-function-keys](https://gitlab.com/interception/linux/plugins/dual-function-keys) is a program that allows you to change the function of a key depending on whether it is tapped or held. I use it for several things:
+
+	1.1. Holding Space functions as Ctrl.
+
+	1.2. I've put the Shift-functions on the keys next to the Shift-keys because I found the Shift-keys hard to reach (note that I have a German keyboard where the	left Shift-key is shortened to make space for another key).
+
+	1.3. The 2, 3, 4 and 5 keys are used for Alt-Tabbing and Ctrl-Tabbing. The 4-key is configured to function as Alt when held and as the "Windows-key" (left-compose) when tapped, the 2-key sends a Shift-Tab key-combination when tapped, the 3 and 5 keys are configured in xkb to function as Tab and as Ctrl respectively. For some reason though the 2-key always goes back two entries when used in this way. I don't know what that's about.

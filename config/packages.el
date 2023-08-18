@@ -12,8 +12,20 @@
 (require 'mime-w3m)
 (require 'icicles)
 (require 'projectile)
+(require 'dired-quick-sort)
+(require 'gnus-dired)
+;; (require 'ace-flyspell)
+;; (require 'flyspell-lazy)
+(require 'flyspell-correct-helm)
+(require 'auto-dictionary)
+
+(require 'yaml-mode)
 
 (require 'epa)
+
+(require 'auto-complete-config)
+(require 'ac-math)
+(require 'auto-complete-auctex)
 
 (require 'savehist)
 (add-to-list 'savehist-additional-variables 'helm-dired-history-variable)
@@ -56,7 +68,21 @@
                                      "bookmark+-lit.el"
                                      "bookmark+-doc.el"
                                      "bookmark+-chg.el"))
-                 :defer 2)
+             :defer 2)
+
+(use-package isearch-prop
+             :quelpa (isearch-prop :fetcher wiki
+                                    :files
+                                    ("isearch-prop.el"))
+             :defer 2)
+
+(use-package isearch+
+             :quelpa (isearch+ :fetcher wiki
+                                    :files
+                                    ("isearch+.el"))
+             :defer 2)
+
+
 
 
 ;; (use-package icicles

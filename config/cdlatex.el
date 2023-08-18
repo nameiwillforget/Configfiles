@@ -53,9 +53,6 @@
 
 	(?? ("\\fcmp"))
 
-
-	(?< ("\\leq"))
-
 	(?l ("\\ell"))
 
 
@@ -104,7 +101,7 @@
 	(?~ ("\\simeq"))
 
 	(?j ("\\oplus"))
-	(?+ ("\\pm" "\mp"))
+	(?+ ("\\pm" "\\mp"))
 
 	(?g ("\\langle"))
 
@@ -113,7 +110,7 @@
 	(?w ("\\angle"))
 	(?' ("\\prime"))
 
-	(?b ("\\not"))
+	(?b ("\\blacktriangleslash"))
 
 
 	
@@ -128,20 +125,21 @@
 
 
 
-
-	(?∘ ("\\odot" "\\astrosun"))
-
+	(?∘ ("\\odot" "\\astrosun" "\\bullet"))
 
 
 
 	(?λ ("\\cup" "\\bigcup" "\\medtriangleup"))
-	(?τ("\\supset" "\\supseteq" "\\medtriangleright"))
-	(?ρ("\\cap" "\\bigcap" "\\medtriangledown"))
-	(?ν("\\subset" "\\subseteq" "\\medtriangleleft"))
+	(?τ ("\\supseteq" "\\supset" "\\medtriangleright"))
+	(?ρ ("\\cap" "\\bigcap" "\\medtriangledown"))
+	(?ν ("\\subseteq" "\\subset" "\\medtriangleleft"))
 
+	
+	(?∧ ("\\bigwedge"))
+	(?∨ ("\\bigvee"))
 
-
-
+	(?< ("\\leq" "\\langle" "\\ll" "\\lll"))
+	(?> ("\\geq" "\\rangle" "\\gg" "\\ggg"))	
 
 
 	(?× ("\\otimes" "\\boxtimes"))
@@ -151,21 +149,16 @@
 
 	(?⋉ ("\\lftimes" "\\lfbowtie"))
 	(?⋊ ("\\rftimes" "\\rfbowtie"))
+
 	(?≺ ("\\preqeq" "\\pereqsim"))
-
 	(?≻ ("\\succeq" "\\succsim"))
-
-
-	(?>("\\geq" "\\gg" "\\ggg"))
-
-	(?<("\\leq" "\\ll" "\\lll"))
-
 
 
 	(?← ("\\hookleftarrow" "\\twoheadleftarrow" "\\leftleftarrows"))
 	(?↑ ("\\hookuparrow" "\\twoheaduparrow" "\\upuparrows"))
 	(?→ ("\\hookrightarrow" "\\twoheadrightarrow" "\\rightrightarrows"))
-	(?↓ ("\\hookuparrow" "\\twoheaduparrow" "\\downdownarrows"))
+	(?← ("\\hookdownarrow" "\\twoheaddownarrow" "\\downdownarrows"))
+
     ))
 	
  
@@ -178,7 +171,8 @@
 	(?← "\\xleftarrow" nil t nil nil)
  	(?↑ "\\xuparrow" nil t nil nil)
 	(?→ "\\xrightarrow" nil t nil nil)
-	(?↓ "\\xdownarrow" nil t nil nil)	
+	(?↓ "\\xdownarrow" nil t nil nil)
+
 	))
 
 

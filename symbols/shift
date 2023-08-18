@@ -67,4 +67,13 @@ partial modifier_keys
 xkb_symbols "both_shiftlock" {
     include "shift(lshift_both_shiftlock)"
     include "shift(rshift_both_shiftlock)"
+ };
+
+
+
+
+// Toggle CapsLock when pressing the 0-key.
+partial modifier_keys
+xkb_symbols "ae10_capslock" {
+    key <AE10> {[Caps_Lock]};
 };

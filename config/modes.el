@@ -9,6 +9,27 @@
 (icy-mode 1)
 (dynamic-completion-mode 1)
 
+
+;(ac-config-default)
+(add-to-list 'ac-modes 'latex-mode)   ; make auto-complete aware of `latex-mode`
+(defun ac-latex-mode-setup ()         ; add ac-sources to default ac-sources
+  (setq ac-sources
+     (append '(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
+               ac-sources)))
+
+(add-hook 'TeX-mode-hook 'ac-latex-mode-setup)
+;(add-hook 'TeX-mode-hook 'auto-complete-mode)
+
+(ac-flyspell-workaround)
+
+
+
+(backward-forward-mode 1)
+
+;(flyspell-lazy-mode 1)
+(add-hook 'flyspell-mode-hook (lambda () (auto-dictionary-mode 1)))
+
+
 (epa-file-enable)
 
 
@@ -29,8 +50,12 @@
 ;; (setq smudge 1)
 
 
+(dired-quick-sort-setup)
 
 
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+ (eval-after-load "isearch" '(require 'isearch+))
 
 
 (define-derived-mode writer-mode text-mode "W-EN"
@@ -49,6 +74,7 @@
   (set-input-method 'german-postfix)
   (setq header-line-format " DE> ")
   (setq mode-line-format nil)
+  (ispell-deutsch)
   (flyspell-mode -1)
   (writer-setup-bindings))
 
@@ -58,7 +84,8 @@
   (deactivate-input-method)
   (setq header-line-format " EN> ")
   (setq mode-line-format nil)
-  (flyspell-mode 1)
+  (ispell-english)
+;  (flyspell-mode 1)
   (writer-setup-bindings))
 
 
@@ -80,6 +107,7 @@
   (set-input-method 'german-postfix)
   (setq header-line-format " DE> ")
   (setq mode-line-format nil)
+  (ispell-deutsch)
   (flyspell-mode -1)
   (org-setup-bindings)
   )
@@ -97,7 +125,8 @@
   (deactivate-input-method)
   (setq header-line-format " EN> ")
   (setq mode-line-format nil)
-  (flyspell-mode 1)
+  (ispell-english)
+;  (flyspell-mode 1)
   (org-setup-bindings))
 
 

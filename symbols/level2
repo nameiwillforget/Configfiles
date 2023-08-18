@@ -9,7 +9,7 @@ xkb_symbols "lsgt_switch" {
   };
 };
 
-// The Less/Greater key (while pressed) chooses the second shift level.
+// The Tilde/Grave key (while pressed) chooses the second shift level.
 partial modifier_keys
 xkb_symbols "tlde_switch" {
   key <TLDE> {

@@ -1,4 +1,4 @@
- (bind-key* "C-e" 'previous-line)
+(bind-key* "C-e" 'previous-line)
 (bind-key* "C-a" 'backward-char)
 
 (bind-key* "C-t" 'forward-char)
@@ -16,11 +16,18 @@
 (bind-key* "M-τ" 'beginning-of-buffer)
 (bind-key* "M-ν" 'end-of-buffer)
 
+(bind-key* "C-}" 'backward-sexp)
+(bind-key* "C-(" 'forward-sexp)
+
+(bind-key* "C-{" 'backward-paragraph)
+(bind-key* "C-)" 'forward-paragraph)
+
+(bind-key* "C-q" 'scroll-down-command)
 
 (bind-key* "C-i" 'isearch-backward)
 (define-key isearch-mode-map (kbd "C-i") 'isearch-repeat-backward)
 
-(bind-key* "C-{" 'isearch-backward-regexp)
+(bind-key* "C-/" 'isearch-backward-regexp)
 
 (bind-key* "C-n" 'isearch-forward)
 (define-key isearch-mode-map (kbd "C-n") 'isearch-repeat-forward)
@@ -31,7 +38,7 @@
 (bind-key* "M--" 'replace-regexp)
 
 (bind-key* "M-C-n" 'query-replace)
-(bind-key* "M--" 'query-replace-regexp)
+(bind-key* "M-C--" 'query-replace-regexp)
 
  
 (bind-key* "C-," 'set-mark-command)
@@ -52,7 +59,7 @@
 (global-set-key (kbd "C-x C-b") 'helm-recentf)
 (global-set-key (kbd "C-x C-\"") 'helm-find-files)
 
-;; (bind-key* "M-ι" 'pop-tag-mark)
+(bind-key* "M-ι" 'pop-tag-mark)
 ;; (bind-key* "M-C-ι" 'pop-global-mark)
 
 (bind-key* "C-ι" 'backward-forward-previous-location)
@@ -61,6 +68,22 @@
 
 (bind-key* "M-∧" 'upcase-region)
 (bind-key* "M-∨" 'downcase-region)
+
+
+(bind-key* "s-t" 'kmacro-start-macro-or-insert-counter)
+(bind-key* "s-n" 'kmacro-end-or-call-macro)
+
+(bind-key* "s-C-t" 'kmacro-name-last-macro)
+(bind-key* "s-C-n" 'kmacro-bind-to-key)
+
+
+(bind-key* "s-s" 'desktop-save)
+
+(bind-key* "s-p" 'flyspell-correct-buffer)
+(bind-key* "s-<kp-0>" 'cycle-ispell-languages)
+(bind-key* "s-1" 'ispell-deutsch)
+(bind-key* "s-2" 'ispell-english)
+
 
 ;;Tab settings
 (bind-key* "C-↓" 'tab-new)
@@ -95,9 +118,25 @@
 (global-unset-key (kbd "<kp-9>"))
 (define-key function-key-map (kbd "<kp-9>") 'event-apply-meta-modifier)
 
-(bind-key* "C-p" 'tab-to-tab-stop)
+(global-unset-key (kbd "<kp-multiply>"))
+(define-key function-key-map (kbd "<kp-multiply>") 'event-apply-super-modifier)
+
+(global-unset-key (kbd "<kp-divide>"))
+(define-key function-key-map (kbd "<kp-divide>") 'event-apply-super-modifier)
+
+
+
+(bind-key* "C-p" 'indent-for-tab-command)
+
+(bind-key* "M-<tab>" 'tab-to-tab-stop)
 
 (bind-key* "C-s" 'w3m-search)
+
+
+
+;;ac-complete keybinds
+(bind-key "1" 'ac-complete ac-completing-map)
+
 
 ;;cdlatex-keybinds
 (global-unset-key (kbd "<XF86Launch5>"))
@@ -105,26 +144,47 @@
 (setq cdlatex-math-symbol-prefix ?´)
 
 (bind-key "<right>" 'cdlatex-tab cdlatex-mode-map)
+
+(unbind-key "\'" cdlatex-mode-map)
 (bind-key "\"" 'cdlatex-math-modify cdlatex-mode-map)
 
 
+(fset 'cdlatex-text
+      (kmacro-lambda-form [?\" ?t] 0 "%d"))
+
+(bind-key "ђ" 'cdlatex-text cdlatex-mode-map)
+
+
+(fset 'cdlatex-mathit
+   (kmacro-lambda-form [?\" ?i] 0 "%d"))
+
+(bind-key "њ" 'cdlatex-mathit cdlatex-mode-map)
+
+(bind-key "M-ℕ" 'change-mathvar cdlatex-mode-map)
+(bind-key "C-M-ℕ" 'change-mathvar-withinstring cdlatex-mode-map)
+
+(bind-key* "M-]" 'remove-environment cdlatex-mode-map)
+
 
 ;;aya-keybinds
-(bind-keys :prefix-map aya-map :prefix (kbd "C-!")
+(bind-keys* :prefix-map aya-map :prefix (kbd "C-?")
 	   ("e" . aya-create)
 	   ("r" . aya-expand-from-history)
 	   ("c" . aya-delete-from-history)
 	   ("," . aya-clear-history)
 	   ("t" . aya-next-in-history)
 	   ("a" . aya-previous-in-history)
-	   ("p" . aya-presist-snippet)
+	   ("p" . aya-persist-snippet)
 	   ("f" . aya-open-line)
 	   )
 
-(bind-key* "C-?"     #'aya-expand)
+(bind-key* "C-!"     #'aya-expand)
 
 
 (bind-key* "C-." 'ace-jump-mode)
+(bind-key* "C-¬" 'ace-jump-char-mode)
+
+;(bind-key* "s-." 'ace-flyspell-dwim)
 
 
 (bind-key* "M-→" 'windmove-right)
@@ -139,9 +199,6 @@
 
 (bind-key "M-c" 'cdlatex-mode org-mode-map)
 
-;;(define-key pdf-view-mode-map (kbd "M-n") 'org-noter)
-;;(define-key pdf-view-mode-map (kbd "C-s") 'isearch-forward))
-
 (bind-key "f" 'find-name-dired dired-mode-map)
 (bind-key "M-m" 'dired-mark-suffix dired-mode-map)
 
@@ -149,31 +206,49 @@
 (bind-key "C-c C-r" 'eval-region emacs-lisp-mode-map)
 (bind-key "C-c C-b" 'eval-buffer emacs-lisp-mode-map)
 
-
-(with-eval-after-load "pdf-view"
-  (define-key pdf-view-mode-map (kbd "C-n") #'org-noter))
-
-
 (bind-key "<previous>" 'helm-previous-source helm-map)
 (bind-key "<next>" 'helm-next-source helm-map)
 
 
+(add-hook 'vterm-mode-hook
+	  '(lambda ()
+	    (bind-key "C-y" 'vterm-yank vterm-mode-map)))
+
+;; (add-hook 'pdf-view-mode-hook
+;; 	  '(lambda ()
+;; ;;	     (unbind-key (kbd "M-m"))
+;; 	     (define-key pdf-view-mode-map (kbd "M-n") 'org-noter))
+;; 	     (define-key pdf-view-mode-map (kbd "M-w") 'pdf-view-kill-ring-save))
+
+
+
+
+
+(with-eval-after-load "vterm-mode"
+  	     (define-key vterm-mode-map (kbd "C-y") 'vterm-yank))
+
+
 (define-key projectile-mode-map (kbd "M-\"") 'projectile-command-map)
+
 			
 (bind-keys :prefix-map miscellaneous-map :prefix (kbd "C-^")
 	   ("m" . mu4e-modeline-mode)
-	   ("^" . tab-to-tab-stop)
 	   ("s" . TeX-command-toggle-shell-escape)
 	   ("M" . magit)
 	   ("l" . list-packages)	  	   
+	   ("v" . vterm)
+	   ("f" . flyspell-toggle)
+	   ("S" . speed-type-text)	   
 	   )
 
 (bind-keys :prefix-map miscellaneous-map :prefix (kbd "C-<dead-circumflex>")
 	   ("m" . mu4e-modeline-mode)
-	   ("^" . tab-to-tab-stop)
 	   ("s" . TeX-command-toggle-shell-escape)
 	   ("M" . magit)
-	   ("l" . list-packages)	  	   
+	   ("l" . list-packages)
+	   ("v" . vterm)
+	   ("f" . flyspell-toggle)
+	   ("S" . speed-type-text)	   
 	   )
 
 
@@ -195,7 +270,14 @@
 ;; (define-key helm-map (kbd "C-r") #'helm-next-line)
 ;; (define-key helm-map (kbd "C-)") #'helm-minibuffer-history)
 
-;; (define-key w3m-mode-map (kbd "C-a") 'backward-char)
+(bind-key "<up>" 'w3m-view-this-url-new-session w3m-mode-map)
+(bind-key "<left>" 'w3m-tab-previous-buffer w3m-mode-map)
+(bind-key "<right>" 'w3m-tab-next-buffer w3m-mode-map)
+
+(bind-key "C-M-t" 'w3m-view-previous-page w3m-mode-map)
+(bind-key "C-M-n" 'w3m-view-next-page w3m-mode-map)
+
+
 ;; (define-key w3m-mode-map (kbd "C-t") 'forward-char)
 ;; (define-key w3m-mode-map (kbd "C-e") 'previous-line)
 ;; (define-key w3m-mode-map (kbd "C-r") 'next-line)
@@ -205,4 +287,5 @@
 ;; (define-key w3m-mode-map (kbd "<prior>") 'move-beginning-of-line)
 ;; (define-key w3m-mode-map (kbd "<next>") 'move-end-of-lrine)
 
-;;(define-key mu4e--compose-mode-map (kbd "C-a") 'backward-char)
+;; (define-key mu4e--compose-mode-map (kbd "C-a") 'backward-char)
+
