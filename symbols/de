@@ -957,6 +957,8 @@ xkb_symbols "adnw_base" {
     key <AD09> { [ m,                       M,                       NoSymbol,                Greek_mu,	               6,		     U227B,                   U1D544,         U043C                 ] };
     key <AD10> { [ f,                       F,                       NoSymbol,                Greek_phi,               NoSymbol,              U220F,                   Greek_PHI,               U0444                 ] };
     key <AD11> { [ j,                       J,                       EuroSign,                   NoSymbol,                NoSymbol,              U2210,                   NoSymbol,                U044A                 ] };
+    key <AD12> { [ dead_acute,              dead_grave,              dead_stroke,             dead_psili,              dead_doubleacute,        NoSymbol,                dead_breve,              NoSymbol                 ] };
+
     key <AC01> { [ h,                       H,                       NoSymbol,                Greek_eta,               Prior,                 U2194,                   U210D,                U0445                 ] };
     key <AC02> { [ i,                       I,                       NoSymbol,                Greek_iota,              Left,                  U2190,                   NoSymbol,                U0438                 ] };
     key <AC03> { [ e,                       E,                       NoSymbol,                Greek_epsilon,           Down,                  U2193,                   NoSymbol,                U044D                 ] };

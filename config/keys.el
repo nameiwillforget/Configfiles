@@ -233,6 +233,7 @@
 			
 (bind-keys :prefix-map miscellaneous-map :prefix (kbd "C-^")
 	   ("m" . mu4e-modeline-mode)
+	   ("¬ m" . mu4e-quit)	   
 	   ("s" . TeX-command-toggle-shell-escape)
 	   ("M" . magit)
 	   ("l" . list-packages)	  	   
@@ -243,6 +244,7 @@
 
 (bind-keys :prefix-map miscellaneous-map :prefix (kbd "C-<dead-circumflex>")
 	   ("m" . mu4e-modeline-mode)
+	   ("¬ m" . mu4e-quit)	   
 	   ("s" . TeX-command-toggle-shell-escape)
 	   ("M" . magit)
 	   ("l" . list-packages)
@@ -276,6 +278,8 @@
 
 (bind-key "C-M-t" 'w3m-view-previous-page w3m-mode-map)
 (bind-key "C-M-n" 'w3m-view-next-page w3m-mode-map)
+
+(bind-key "c" 'ace-jump-mode w3m-mode-map)
 
 
 ;; (define-key w3m-mode-map (kbd "C-t") 'forward-char)

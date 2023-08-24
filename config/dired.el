@@ -1,7 +1,9 @@
 (setq dired-guess-shell-alist-user
       '(
        ("\\.mp3" "gnome-terminal -x sh -c 'mplayer -af scaletempo * ' ")
-       ("\\.mkv" "mplayer")
+       ("\\.mkv" "gnome-terminal -x sh -c 'mplayer * ' ")
+       ("\\.mp4" "gnome-terminal -x sh -c 'mplayer * ' ")
+
 ))
 
 (setq delete-by-moving-to-trash t)
